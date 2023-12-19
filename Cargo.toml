@@ -8,7 +8,7 @@ description = "A tool to manage tasks inside the terminal"
 readme = "README.md"
 homepage = "https://github.com/windrnr/Codex"
 repository = "https://github.com/windrnr/Codex"
-keywords = ["cli", "task manager"]
+keywords = ["cli"]
 categories = ["command-line-utilities"]
 
 [dependencies]
