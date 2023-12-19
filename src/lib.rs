@@ -134,7 +134,7 @@ pub fn run_codex() -> Result<()> {
         .read(true)
         .append(true)
         .create(true)
-        .open("./task.csv")?;
+        .open("./tasks.csv")?;
 
     let cli = Cli::parse();
     match &cli.command {

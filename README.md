@@ -1,9 +1,11 @@
 ---
+
+<div align = "center">
 # Codex
 Codex es una herramienta sencilla de terminal para manejar tareas desde la consola. 
 
-**README Sections:** [Opciones](##Opciones) - [Descripción](##Descripción) - 
-<!-- [Instalación](##Instalación) -->
+**Secciones del README:** [Opciones](#Opciones) - [Descripción](#Descripción) - 
+<!-- [Instalación](#Instalación) -->
 
 ![Screenshots de Codex](screenshot.png)
 ---
