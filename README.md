@@ -1,6 +1,7 @@
 ---
 
 <div align = "center">
+
 # Codex
 Codex es una herramienta sencilla de terminal para manejar tareas desde la consola. 
 
@@ -8,7 +9,12 @@ Codex es una herramienta sencilla de terminal para manejar tareas desde la conso
 <!-- [Instalación](#Instalación) -->
 
 ![Screenshots de Codex](screenshot.png)
+
+
+</div>
+
 ---
+
 ## Descripción
 El programa nace porque quería tener una lista de tareas siempre a mano. El mismo seguirá en desarrollo siempre y cuando se me vayan ocurriendo mejoras.
 
