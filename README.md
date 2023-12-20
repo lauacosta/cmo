@@ -25,11 +25,13 @@ Codex está escrito en Rust y se apoya en librerías como:
 - [`Colored`](https://docs.rs/colored/latest/colored/).
 - [`Serde`](https://docs.rs/serde/latest/serde/).
 
+Codex sigue la [especificación XDG a la hora de definir directorios base](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html).
+
 ## Opciones
 ### Comandos
 Por el momento Codex viene con tres comandos: **'Add'**, **'Print'**.
 
-- **Add** añadirá una tarea (las cuales pueden tener tres ordenes de prioridad: High, Medium y Low) a un archivo `tasks.csv`:
+- **Add** añadirá una tarea (las cuales pueden tener tres ordenes de prioridad: High, Medium y Low) a un archivo `tasks.csv`, ubicado por defecto en `$XDG_DATA_HOME/codex` si está definido, en caso contrario, en `.local/share/codex`:
 ``` fish
     # Las opciones High, Medium y Low pueden abreviarse con h, m o l respectivamente.
     codex add -p high "Añadir pruebas a Codex"

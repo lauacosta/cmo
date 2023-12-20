@@ -1,9 +1,8 @@
-use codex::run_codex;
+use codex::run;
 
 fn main() {
     // load_config()
-    if let Err(e) = run_codex() {
+    if let Err(e) = run() {
         eprintln!("Error: {e}");
     }
-
 }
