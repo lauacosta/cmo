@@ -5,8 +5,7 @@
 # cmo
 cmo es una herramienta sencilla de terminal para manejar tareas desde la consola. 
 
-**Secciones del README:** [Opciones](#Opciones) - [Descripción](#Descripción) - 
-<!-- [Instalación](#Instalación) -->
+**Secciones del README:** [Opciones](#Opciones) - [Descripción](#Descripción) - [Instalación](#Instalación)
 
 ![Screenshots de cmo](cmo_screenshot.png)
 
@@ -36,37 +35,38 @@ Por el momento `cmo` viene con tres comandos: **'add'**, **'list'**, **'flip'**,
 - **add** añadirá una tarea (las cuales pueden tener tres ordenes de prioridad: High, Medium y Low) a un archivo `tasks.csv`:
 ``` bash
     # Las opciones High, Medium y Low pueden abreviarse con h, m o l respectivamente.
-    cmo add -p medium "Comprar pan"
-    cmo add -ph "Leer El Camino de los Reyes"
+   $ cmo add -p medium "Comprar pan"
+   $ cmo add -ph "Leer El Camino de los Reyes"
 ```
 - **list** mostrará por pantalla, en orden de mayor prioridad a menor, las tareas presentes es `tasks.csv`. También puede elegirse determinadas prioridades: 
 ``` bash
-    cmo list
-    cmo list -p medium 
-    cmo list -ph
+   $ cmo list
+   $ cmo list -p medium 
+   $ cmo list -ph
 ```
 - **flip** permite cambiar el estado de una tarea de incompleta a completa, indicando el número de la tarea en el listado: 
 ``` bash
-    cmo flip 10
+   $ cmo flip 10
 ```
 
 - **remove** permite borrar una tarea, indicando el número de la tarea en el listado: 
 ``` bash
-    cmo remove 10
+   $ cmo remove 10
 ```
 
 - **help** mostrará por pantalla un mensaje de ayuda para cada sub-comando.
 ``` bash
-    cmo help 
-    cmo help add 
-    cmo help print
-    cmo help flip 
-    cmo help remove
+   $ cmo help 
+   $ cmo help add 
+   $ cmo help list
+   $ cmo help flip 
+   $ cmo help remove
 ```
 
-<!-- ## Instalación -->
-<!-- ### Cargo -->
-<!-- Si ya tenés instalado y configurado Rust, podés instalarlo usando: -->
-<!-- ``` -->
-<!-- cargo install cmo -->
-<!-- ``` -->
+## Instalación
+### Cargo
+Si ya tenés instalado y configurado Rust, podés instalarlo usando:
+```
+$ cargo install cmo
+```
+Cargo generará el binario y lo colocará en `$HOME/.cargo`
