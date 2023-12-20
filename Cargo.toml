@@ -1,13 +1,13 @@
 [package]
-name = "codex"
+name = "cmo"
 version = "0.1.0"
 edition = "2021"
 author = ["Lautaro Acosta Quintana <acostaquintanalautaro@gmail.com"]
 license = "MIT OR Apache-2.0"
 description = "A tool to manage tasks inside the terminal"
 readme = "README.md"
-homepage = "https://github.com/windrnr/Codex"
-repository = "https://github.com/windrnr/Codex"
+homepage = "https://github.com/windrnr/cmo"
+repository = "https://github.com/windrnr/cmo"
 keywords = ["cli"]
 categories = ["command-line-utilities"]
 
