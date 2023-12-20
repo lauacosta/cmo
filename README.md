@@ -8,7 +8,7 @@ cmo es una herramienta sencilla de terminal para manejar tareas desde la consola
 **Secciones del README:** [Opciones](#Opciones) - [Descripción](#Descripción) - 
 <!-- [Instalación](#Instalación) -->
 
-![Screenshots de cmo](cmo_screenshot.png)
+<!-- ![Screenshots de cmo](cmo_screenshot.png) -->
 
 
 </div>
@@ -16,7 +16,7 @@ cmo es una herramienta sencilla de terminal para manejar tareas desde la consola
 ---
 
 ## Descripción
-`cmo` es una abreviación informal de la frase _casi me olvido_.
+`cmo` es una abreviación informal de la frase `_casi me olvido_`.
 
 El programa nace porque quería tener una lista de tareas siempre a mano. El mismo seguirá en desarrollo siempre y cuando se me vayan ocurriendo mejoras.
 

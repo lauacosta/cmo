@@ -1,4 +1,4 @@
-use codex::run;
+use cmo::run;
 
 fn main() {
     // load_config()
