@@ -29,23 +29,37 @@ Codex sigue la [especificación XDG a la hora de definir directorios base](https
 
 ## Opciones
 ### Comandos
-Por el momento Codex viene con tres comandos: **'Add'**, **'Print'**.
+Por el momento Codex viene con tres comandos: **'add'**, **'list'**, **'flip'**, **'remove'** y **'help'**.
 
-- **Add** añadirá una tarea (las cuales pueden tener tres ordenes de prioridad: High, Medium y Low) a un archivo `tasks.csv`, ubicado por defecto en `$XDG_DATA_HOME/codex` si está definido, en caso contrario, en `.local/share/codex`:
-``` fish
+- **add** añadirá una tarea (las cuales pueden tener tres ordenes de prioridad: High, Medium y Low) a un archivo `tasks.csv`:
+``` bash
     # Las opciones High, Medium y Low pueden abreviarse con h, m o l respectivamente.
-    codex add -p high "Añadir pruebas a Codex"
-    codex add -ph "Comprar pan" 
+    codex add -p medium "Comprar pan"
+    codex add -ph "Leer El Camino de los Reyes"
 ```
-- **Print** mostrará por pantalla, en orden de mayor prioridad a menor, las tareas presentes es `tasks.csv`: 
-``` fish
-    codex print
+- **list** mostrará por pantalla, en orden de mayor prioridad a menor, las tareas presentes es `tasks.csv`. También puede elegirse determinadas prioridades: 
+``` bash
+    codex list
+    codex list -p medium 
+    codex list -ph
 ```
-- **Help** mostrará por pantalla un mensaje de ayuda para cada subcomando.
-``` fish
+- **flip** permite cambiar el estado de una tarea de incompleta a completa, indicando el número de la tarea en el listado: 
+``` bash
+    codex flip 10
+```
+
+- **remove** permite borrar una tarea, indicando el número de la tarea en el listado: 
+``` bash
+    codex remove 10
+```
+
+- **help** mostrará por pantalla un mensaje de ayuda para cada sub-comando.
+``` bash
     codex help 
     codex help add 
     codex help print
+    codex help flip 
+    codex help remove
 ```
 
 <!-- ## Instalación -->

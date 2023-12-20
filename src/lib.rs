@@ -31,7 +31,7 @@ fn cli() -> Command {
             .arg(
                 arg!(-p --priority <priority> "Priority of the tasks to list. If none is given, it defaults to listing all the tasks")
                 .required(false)
-                .default_value("all")
+                .default_value("any")
                 )
         )
         .subcommand(
@@ -123,7 +123,7 @@ struct Task {
 impl core::fmt::Display for Task {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
         let state = match self.completed {
-            true => "✔",
+            true => "X",
             false => " ",
         };
 
@@ -223,7 +223,7 @@ fn list_tasks(priority: &str, file: File) -> Result<()> {
         "low" | "l" => print_task(Some(Priority::LOW), file)?,
         "medium" | "m" => print_task(Some(Priority::MEDIUM), file)?,
         "high" | "h" => print_task(Some(Priority::HIGH), file)?,
-        "all" | "a" => print_task(None, file)?,
+        "any" | "a" => print_task(None, file)?,
         _ => bail!("Unkown priority level"),
     }
     Ok(())
