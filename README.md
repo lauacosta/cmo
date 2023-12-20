@@ -8,7 +8,7 @@ Codex es una herramienta sencilla de terminal para manejar tareas desde la conso
 **Secciones del README:** [Opciones](#Opciones) - [Descripción](#Descripción) - 
 <!-- [Instalación](#Instalación) -->
 
-<!-- ![Screenshots de Codex](screenshot.png) -->
+![Screenshots de Codex](codex_screenshot.png)
 
 
 </div>
