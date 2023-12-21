@@ -30,7 +30,7 @@ cmo está escrito en Rust y se apoya en librerías como:
 
 ## Opciones
 ### Comandos
-Por el momento `cmo` viene con tres comandos: **'add'**, **'list'**, **'flip'**, **'remove'** y **'help'**.
+Por el momento `cmo` viene con cinco comandos: **'add'**, **'list'**, **'flip'**, **'remove'** y **'help'**.
 
 - **add** añadirá una tarea (las cuales pueden tener tres ordenes de prioridad: High, Medium y Low) a un archivo `tasks.csv`:
 ``` bash
@@ -44,7 +44,7 @@ Por el momento `cmo` viene con tres comandos: **'add'**, **'list'**, **'flip'**,
    $ cmo list -p medium 
    $ cmo list -ph
 ```
-- **flip** permite cambiar el estado de una tarea de incompleta a completa, indicando el número de la tarea en el listado: 
+- **flip** permite cambiar el estado de una tarea de incompleta a completa y viceversa, indicando el número de la tarea en el listado: 
 ``` bash
    $ cmo flip 10
 ```
@@ -54,7 +54,7 @@ Por el momento `cmo` viene con tres comandos: **'add'**, **'list'**, **'flip'**,
    $ cmo remove 10
 ```
 
-- **help** mostrará por pantalla un mensaje de ayuda para cada sub-comando.
+- **help** mostrará por pantalla un mensaje de ayuda para cada sub-comando:
 ``` bash
    $ cmo help 
    $ cmo help add 
@@ -65,7 +65,7 @@ Por el momento `cmo` viene con tres comandos: **'add'**, **'list'**, **'flip'**,
 
 ## Instalación
 ### Cargo
-Si ya tenés instalado y configurado Rust, podés instalarlo usando:
+Si ya tenés instalado y configurado [Rust](https://www.rust-lang.org/), podés instalarlo usando:
 ```
 $ cargo install cmo
 ```
