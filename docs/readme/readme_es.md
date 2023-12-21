@@ -7,7 +7,7 @@ cmo es una herramienta sencilla de terminal para manejar tareas desde la consola
 
 **Secciones del README:** [Opciones](#Opciones) - [Descripción](#Descripción) - [Instalación](#Instalación)
 
-![Screenshots de cmo](cmo_screenshot.png)
+![Screenshots de cmo](../../cmo_screenshot.png)
 
 
 </div>
