@@ -169,13 +169,15 @@ fn remove_task(needle: usize, file: File) -> Result<()> {
     let mut tasks = read_tasks(file.try_clone()?)?;
 
     if tasks.len() == 0 {
-        return Err(anyhow!("It's not possible to remove the task because the list of tasks is empty"))
+        return Err(anyhow!(
+            "It's not possible to remove the task because the list of tasks is empty"
+        ));
     }
 
     if needle - 1 > tasks.len() {
         return Err(anyhow!(
             "Removal index should be less than the length of the list"
-        ))
+        ));
     }
 
     tasks.remove(needle - 1);
@@ -196,7 +198,9 @@ fn flip_task(needle: usize, file: File) -> Result<()> {
     let mut tasks = read_tasks(file.try_clone()?)?;
 
     if tasks.len() == 0 {
-        return Err(anyhow!("It's not possible to flip the task because the list of tasks is empty"))
+        return Err(anyhow!(
+            "It's not possible to flip the task because the list of tasks is empty"
+        ));
     }
 
     if let Some(task) = tasks.get_mut(needle - 1) {
@@ -221,12 +225,17 @@ fn flip_task(needle: usize, file: File) -> Result<()> {
 }
 
 fn print_task(mode: Option<Priority>, file: File) -> Result<()> {
+    let tasks = read_tasks(file)?;
+
+    if tasks.len() == 0 {
+        return Err(anyhow!("The list of tasks is empty"));
+    }
     match mode {
-        Some(needle) => read_tasks(file)?
+        Some(needle) => tasks
             .into_iter()
             .filter(|task| task.priority == needle)
             .for_each(|task| println!("{task}")),
-        None => read_tasks(file)?
+        None => tasks
             .into_iter()
             .enumerate()
             .for_each(|(idx, task)| println!("     {}. {task}", idx + 1)),
