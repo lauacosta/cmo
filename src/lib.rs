@@ -168,6 +168,10 @@ fn read_tasks(file: File) -> Result<Vec<Task>> {
 fn remove_task(needle: usize, file: File) -> Result<()> {
     let mut tasks = read_tasks(file.try_clone()?)?;
 
+    if tasks.len() == 0 {
+        return Err(anyhow!("It's not possible to remove the task because the list of tasks is empty"))
+    }
+
     if needle - 1 > tasks.len() {
         return Err(anyhow!(
             "Removal index should be less than the length of the list"
@@ -191,11 +195,9 @@ fn remove_task(needle: usize, file: File) -> Result<()> {
 fn flip_task(needle: usize, file: File) -> Result<()> {
     let mut tasks = read_tasks(file.try_clone()?)?;
 
-    //     if needle - 1 > tasks.len() {
-    //         return Err(anyhow!(
-    //             "Flip index should be less than the length of the list"
-    //         ));
-    //     }
+    if tasks.len() == 0 {
+        return Err(anyhow!("It's not possible to flip the task because the list of tasks is empty"))
+    }
 
     if let Some(task) = tasks.get_mut(needle - 1) {
         task.completed = !task.completed;
