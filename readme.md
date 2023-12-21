@@ -17,7 +17,7 @@ cmo is a simple cli for managing tasks directly in the terminal.
 ---
 
 ## Description
-`cmo` is an informal abbreviation for the phrase `_casi me olvido_` (I almost forgot).
+`cmo` is an informal abbreviation for the Spanish phrase _casi me olvido_ (I almost forgot).
 
 The program is born because I wanted to have a task list always at hand. It will continue to be developed as long as I come up with improvements.
 
@@ -65,7 +65,7 @@ At the moment `cmo` comes with five commands: **'add'**, **'list'**, **'flip'**,
    $ cmo help remove
 ```
 
-## Instalación
+## Installation
 ### Cargo
 If you already have [Rust](https://www.rust-lang.org/) installed and configured, you can install it using:
 ```
