@@ -2,7 +2,7 @@
 name = "cmo"
 version = "0.1.1"
 edition = "2021"
-author = ["Lautaro Acosta Quintana <acostaquintanalautaro@gmail.com"]
+authors = ["Acosta Quintana, Lautaro <acostaquintanalautaro@gmail.com>"]
 license = "MIT OR Apache-2.0"
 description = "A tool to manage tasks inside the terminal"
 readme = "README.md"

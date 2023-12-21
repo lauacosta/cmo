@@ -14,6 +14,7 @@ fn cli() -> Command {
         .version(crate_version!())
         .about(crate_description!())
         .arg_required_else_help(true)
+        .help_template("{name} v{version}. \n{about-with-newline}\n{usage-heading}{usage} \n{all-args}")
         .subcommand(
             Command::new("add")
             .about("Adds a task")
@@ -82,7 +83,7 @@ pub fn run() -> Result<()> {
                 .parse::<usize>()?;
 
             flip_task(number, tasks_file)?;
-        },
+        }
         Some(("remove", sub_matches)) => {
             let number = sub_matches
                 .get_one::<String>("number")
@@ -166,6 +167,13 @@ fn read_tasks(file: File) -> Result<Vec<Task>> {
 
 fn remove_task(needle: usize, file: File) -> Result<()> {
     let mut tasks = read_tasks(file.try_clone()?)?;
+
+    if needle - 1 > tasks.len() {
+        return Err(anyhow!(
+            "Removal index should be less than the length of the list"
+        ))
+    }
+
     tasks.remove(needle - 1);
     file.set_len(0)?;
     let mut writer = csv::WriterBuilder::new()
@@ -183,11 +191,15 @@ fn remove_task(needle: usize, file: File) -> Result<()> {
 fn flip_task(needle: usize, file: File) -> Result<()> {
     let mut tasks = read_tasks(file.try_clone()?)?;
 
+    //     if needle - 1 > tasks.len() {
+    //         return Err(anyhow!(
+    //             "Flip index should be less than the length of the list"
+    //         ));
+    //     }
+
     if let Some(task) = tasks.get_mut(needle - 1) {
         task.completed = !task.completed;
-
         file.set_len(0)?;
-
         let mut writer = csv::WriterBuilder::new()
             .has_headers(false)
             .from_writer(file);
@@ -200,7 +212,9 @@ fn flip_task(needle: usize, file: File) -> Result<()> {
 
         Ok(())
     } else {
-        Err(anyhow!("Task not found"))
+        Err(anyhow!(
+            "Flip index should be less than the length of the list"
+        ))
     }
 }
 
