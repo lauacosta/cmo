@@ -228,7 +228,8 @@ fn print_task(mode: Option<Priority>, file: File) -> Result<()> {
     let tasks = read_tasks(file)?;
 
     if tasks.len() == 0 {
-        return Err(anyhow!("The list of tasks is empty"));
+        println!("\tThe list of tasks is empty");
+        return Ok(());
     }
     match mode {
         Some(needle) => tasks
