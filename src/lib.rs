@@ -293,7 +293,7 @@ fn create_tasks_file() -> Result<PathBuf> {
                 .unwrap()
         });
 
-    let dir_file_path = xdg_data_home_default.join("codex");
+    let dir_file_path = xdg_data_home_default.join("cmo");
     create_dir_all(&dir_file_path)?;
     Ok(dir_file_path.join("tasks.csv"))
 }
